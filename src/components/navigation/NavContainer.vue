@@ -5,7 +5,7 @@
       </div>
       <NavIcon />
     </nav>
-    <NavDrawer>
+    <NavDrawer v-if="drawerShowing">
       <NavLink />
     </NavDrawer>
   </div>
@@ -21,7 +21,15 @@ export default Vue.extend({
     NavIcon,
     NavDrawer,
     NavLink
-  }
+  },
+  computed: {
+    drawerShowing () {
+      return this.$store.state.drawerShowing
+    },
+    routes () {
+      return this.$router.options.routes;
+    }
+  },
 })
 </script>
 
