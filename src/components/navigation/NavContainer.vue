@@ -5,8 +5,14 @@
       </div>
       <NavIcon />
     </nav>
-    <NavDrawer v-if="drawerShowing">
-      <NavLink />
+    <NavDrawer 
+      :class="drawerShowing ? 'h-screen' : 'h-0'"
+      class="text-3xl items-center flex flex-col drawer truncate h-0 transition-all">
+      <NavLink 
+        v-for="(route,i) in routes" 
+        :key="route.name" 
+        :route="route"
+        :class="drawerShowing ? `transition-all delay-${i*100}` : 'opacity-0 mt-96'"/>
     </NavDrawer>
   </div>
 </template>

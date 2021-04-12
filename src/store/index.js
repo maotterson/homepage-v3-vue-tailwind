@@ -7,6 +7,11 @@ export default new Vuex.Store({
   state: {
     drawerShowing : false
   },
+  getters: {
+    drawerShowing(){
+      return this.state.drawerShowing;
+    }
+  },
   mutations: {
     toggleDrawer(){
       this.state.drawerShowing ? this.state.drawerShowing = false : this.state.drawerShowing = true;

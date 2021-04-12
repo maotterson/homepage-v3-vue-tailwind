@@ -1,12 +1,16 @@
 <template>
-  <div class="drawer-link p-5 opacity-0 mt-96">Lorem Ipsum</div>
+  <router-link 
+    :to="route.path" 
+    class="drawer-link p-5"
+    ref="routerLink">
+    {{route.name}}
+  </router-link>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-  components:{
-  }
+  props: ['route']
 })
 </script>
 

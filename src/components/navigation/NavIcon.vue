@@ -18,7 +18,7 @@ export default Vue.extend({
     },
   },
   watch:{
-    drawerShowing(){
+    drawerShowing (){
       this.changeIconAppearance();
     }
   },
