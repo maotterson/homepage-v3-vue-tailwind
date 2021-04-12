@@ -1,16 +1,11 @@
 <template>
-  <div>
-    <NavContainer />
-    <router-view />
-  </div>
+  <div class="drawer-link p-5 opacity-0 mt-96">Lorem Ipsum</div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import NavContainer from './components/navigation/NavContainer.vue'
 export default Vue.extend({
   components:{
-    NavContainer
   }
 })
 </script>

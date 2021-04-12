@@ -1,0 +1,9 @@
+:root {
+    --font-family: Avenir, Helvetica, Arial, sans-serif;
+    --primary-color: #333a4b;
+    --background-color-light: white;
+    --dark-bg: black;
+    --dark-fg: white;
+    --light-bg: white;
+    --light-fg: black;
+  }
