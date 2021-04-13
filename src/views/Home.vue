@@ -2,7 +2,9 @@
   <div>
     <TitleSheet 
       :title="'Hello'"
-    />
+    >
+      <h2 class="text-5xl text-gray-300 mt-5 ">My name is <em>Mark Otterson</em>.</h2>
+    </TitleSheet>
   </div>
 </template>
 

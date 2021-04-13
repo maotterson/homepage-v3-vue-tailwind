@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky">
+  <div class="sticky z-50 bg-opacity-0	">
     <nav class="h-5 p-10 flex flex-row justify-between items-center">
       <div class="spacer">
       </div>
@@ -7,7 +7,7 @@
     </nav>
     <NavDrawer 
       :class="drawerShowing ? 'h-screen' : 'h-0'"
-      class="text-3xl items-center flex flex-col drawer truncate transition-all">
+      class="items-center flex flex-col drawer truncate transition-all">
       <NavLink 
         v-for="(route,i) in routes" 
         :key="route.name" 

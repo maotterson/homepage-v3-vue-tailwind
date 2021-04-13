@@ -1,7 +1,7 @@
 <template>
   <router-link 
     :to="route.path" 
-    class="drawer-link p-5"
+    class="drawer-link p-5 text-4xl hover:text-red-600 rounded"
     ref="routerLink"
     @click.native="closeDrawer">
     {{route.name}}.

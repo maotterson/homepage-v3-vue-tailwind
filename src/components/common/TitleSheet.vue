@@ -1,20 +1,18 @@
 <template>
-  <div class="flex pt-80 h-screen justify-evenly">
-    <div class="">
+  <div class="sheet flex pt-48 justify-evenly ">
+    <div class="card p-48 bg-black text-white transform h-screen skew-y-3 w-full ">
       <h1 class="text-8xl">{{title}}.</h1>
-    </div>
-    <div class="spacer">
+      <slot></slot>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props:['title']
+  props:['title', 'subtitle', 'em']
 
 }
 </script>
 
 <style>
-
 </style>

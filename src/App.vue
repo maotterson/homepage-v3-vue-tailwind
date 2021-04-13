@@ -7,10 +7,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
 import NavContainer from './components/navigation/NavContainer.vue'
-export default Vue.extend({
+export default {
   components:{
     NavContainer
   },
@@ -55,11 +54,15 @@ export default Vue.extend({
       this.$store.state.drawerShowing ? htmlElement.style.overflowY="hidden" : htmlElement.style.overflowY="overlay"
     }
   }
-})
+}
 </script>
 
 <style>
 html{
   overflow-y:overlay;
-}  
+}
+em{
+  font-style:normal;
+  color:#ff5c5c;
+}
 </style>

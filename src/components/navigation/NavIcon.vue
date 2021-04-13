@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-icon relative w-6 h-5 visible" ref="burger" id="burger">
+  <div class="nav-icon relative w-6 h-5 visible cursor-pointer z-50 	" ref="burger" id="burger">
     <span class="absolute inset-0 bg-black w-6 h-1 rounded burger-top transition-all	" ref="burgerTop"></span>
     <span class="absolute inset-y-2 bg-black w-6 h-1 rounded burger-middle transition-all	" ref="burgerMiddle" ></span>
     <span class="absolute inset-y-4 bg-black w-6 h-1 rounded burger-bottom transition-all	" ref="burgerBottom"></span>
@@ -57,5 +57,9 @@ export default Vue.extend({
 </script>
 
 <style>
+.nav-icon:hover span{
+  background-color:#DC2626;
+  transition: 0.5s;
 
+}
 </style>
