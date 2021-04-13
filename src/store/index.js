@@ -22,6 +22,7 @@ export default new Vuex.Store({
       this.state.drawerShowing ? this.state.drawerShowing = false : this.state.drawerShowing = true;
     },
     closeDrawer(){
+      this.state.resumeScrollY = 0;
       this.state.drawerShowing = false;
     },
     setScrollY(state, payload){
