@@ -4,7 +4,7 @@
     class="drawer-link p-5"
     ref="routerLink"
     @click.native="closeDrawer">
-    {{route.name}}
+    {{route.name}}.
   </router-link>
 </template>
 

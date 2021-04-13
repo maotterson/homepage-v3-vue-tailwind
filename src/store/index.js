@@ -5,11 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    drawerShowing : false
+    drawerShowing : false,
+    scrollY : 0,
+    resumeScrollY : 0
   },
   getters: {
     drawerShowing(){
       return this.state.drawerShowing;
+    },
+    scrollY(){
+      return this.state.scrollY;
     }
   },
   mutations: {
@@ -18,6 +23,15 @@ export default new Vuex.Store({
     },
     closeDrawer(){
       this.state.drawerShowing = false;
+    },
+    setScrollY(state, payload){
+      this.state.scrollY = payload.y;
+    },
+    forcedScrollUp(){
+      this.state.resumeScrollY = this.state.scrollY
+    },
+    resetScrollResume(){
+      this.state.resumeScrollY = 0;
     }
   },
   actions: {
