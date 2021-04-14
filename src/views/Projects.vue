@@ -9,7 +9,7 @@
           v-for="project in projects"
           :key="project.name"
           class="border-2	border-black h-40 w-40 flex items-center justify-center"
-          :href="`#${project.sectionId}`">
+          @click="scrollToSection(project.sectionId)">
             <span
               class="self-center"
             >{{project.name}}</span>
@@ -20,6 +20,7 @@
       v-for="(project,i) in projects" 
         :key="project.name"
         :project="project"
+        :ref="project.sectionId"
         :class="i%2==0 ? 'bg-black text-white flex-row' : 'bg-white text-black flex-row-reverse'"
     />
   </div>
@@ -37,6 +38,12 @@ export default Vue.extend({
   computed:{
     projects() {
       return this.$store.state.projects
+    }
+  },
+  methods:{
+    scrollToSection(sectionId){
+      console.log(sectionId)
+      this.$refs[sectionId][0].$el.scrollIntoView({behavior: "smooth"})
     }
   }
 })

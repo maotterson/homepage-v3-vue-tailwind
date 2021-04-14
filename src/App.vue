@@ -60,7 +60,6 @@ export default {
 <style>
 html{
   overflow-y:overlay;  
-  scroll-behavior: smooth;
 
 }
 em{
