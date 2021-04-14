@@ -1,9 +1,10 @@
 <template>
-  <div class="sheet flex pt-48 justify-evenly ">
-    <div class="card p-48 bg-black text-white transform h-screen skew-y-3 w-full ">
+  <div class="sheet flex mt-40 justify-evenly ">
+    <div class="card p-8 w-full">
       <h1 class="text-8xl">{{title}}.</h1>
       <slot></slot>
     </div>
+    <div class="spacer"></div>
   </div>
 </template>
 
