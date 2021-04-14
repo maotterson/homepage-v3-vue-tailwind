@@ -1,5 +1,7 @@
 <template>
-  <div class="sticky z-50 bg-opacity-0	">
+  <div 
+    class="fixed z-50 bg-opacity-0"
+    :class="drawerShowing ? 'h-auto' : 'h-20'">
     <nav class="h-5 p-10 flex flex-row justify-between items-center">
       <div class="spacer">
       </div>
@@ -7,7 +9,7 @@
     </nav>
     <NavDrawer 
       :class="drawerShowing ? 'h-screen' : 'h-0'"
-      class="items-center flex flex-col drawer truncate transition-all">
+      class="bg-opacity-100 w-screen bg-white items-center flex flex-col drawer truncate transition-all">
       <NavLink 
         v-for="(route,i) in routes" 
         :key="route.name" 

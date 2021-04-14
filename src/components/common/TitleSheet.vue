@@ -1,6 +1,6 @@
 <template>
-  <div class="sheet flex mt-40 justify-evenly ">
-    <div class="card p-8 w-full">
+  <div class="sheet flex h-full mt-40 justify-evenly ">
+    <div class="card p-8 w-3/4">
       <h1 class="text-8xl">{{title}}.</h1>
       <slot></slot>
     </div>

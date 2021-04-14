@@ -1,7 +1,7 @@
 <template>
-  <div class="h-auto">
+  <div>
     <NavContainer 
-      class="sticky w-screen bg-white text-black inset-0 h-auto overflow-hidden"
+      class="fixed w-screen bg-white text-black inset-0 overflow-hidden"
     />
     <router-view />
   </div>
@@ -59,7 +59,9 @@ export default {
 
 <style>
 html{
-  overflow-y:overlay;
+  overflow-y:overlay;  
+  scroll-behavior: smooth;
+
 }
 em{
   font-style:normal;

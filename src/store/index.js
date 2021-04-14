@@ -47,7 +47,40 @@ export default new Vuex.Store({
     ],
     projects:[
       {
-        name:"Ohio Vaccine Map",
+        name: 'Ohio Vaccine Map',
+        description:'A searchable map of nearby available COVID-19 vaccine appointments in Ohio.',
+        image: 'vaccine',
+        thumbnail: require(`../assets/thumbnails/vaccine-1.svg`),
+        sectionId: 'vaccine'
+      },
+      {
+        name: 'Open Weather Map',
+        description:'An interactive map that provides some basic weather information at a given location.',
+        image: 'cloud',
+        thumbnail: require(`../assets/thumbnails/vaccine-1.svg`),
+        sectionId: 'weather'
+      },
+      {
+        name: 'Android Geography Quiz',
+        description:'A geography game inspired by Traveler IQ. Made for an android device..',
+        image: 'cloud',
+        thumbnail: require(`../assets/thumbnails/vaccine-1.svg`),
+        sectionId: 'geographyquiz'
+      },
+      {
+        name: 'Android Blackjack',
+        description:'A basic implementation of blackjack for an android device.',
+        image: 'cloud',
+        thumbnail: require(`../assets/thumbnails/vaccine-1.svg`),
+        sectionId: 'blackjack'
+      },
+      
+      {
+        name: 'Tesseract JS Demo',
+        description:'A basic vue implementation of the Tesseract JS text parsing API.',
+        image: 'cloud',
+        thumbnail: require(`../assets/thumbnails/vaccine-1.svg`),
+        sectionId: 'tesseract'
       }
     ]
   },
