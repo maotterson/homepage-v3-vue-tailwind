@@ -19,11 +19,11 @@
         </div>
       </div>
       <div class="flex-grow-1	z-50">
-        <h1 class="pt-96 p-24 text-7xl">IMAGE</h1>
       </div>
       <div class="absolute inset-0 w-screen z-1">
       <video class=" opacity-10 w-screen" autoplay muted loop id="myVideo">
-        <source src="../../assets/background-videos/out2.mp4" type="video/mp4">
+        <source 
+          :src="project.bgVideo" type="video/mp4">
       </video>
     </div>
   </div>

@@ -51,28 +51,32 @@ export default new Vuex.Store({
         description:'A searchable map of nearby available COVID-19 vaccine appointments in Ohio.',
         image: 'vaccine',
         sectionId: 'vaccine',
-        link:'https://vaccines.maotterson.com'
+        link:'https://vaccines.maotterson.com',
+        bgVideo: require('@/assets/background-videos/vaccine-bg.mp4')
       },
       {
         name: 'Open Weather Map',
         description:'An interactive map that provides some basic weather information at a given location.',
         image: 'weather',
         sectionId: 'weather',
-        github:'https://github.com/maotterson/weathermap'
+        github:'https://github.com/maotterson/weathermap',
+        bgVideo: require('@/assets/background-videos/weather-bg.mp4')
       },
       {
         name: 'Android Geography Quiz',
         description:'A geography game inspired by Traveler IQ. Made for an android device..',
         image: 'geography',
         sectionId: 'geographyquiz',
-        github:'https://github.com/maotterson/geography-quiz'
+        github:'https://github.com/maotterson/geography-quiz',
+        bgVideo: require('@/assets/background-videos/geography-bg.mp4')
       },
       {
         name: 'Android Blackjack',
         description:'A basic implementation of blackjack for an android device.',
         image: 'blackjack',
         sectionId: 'blackjack',
-        github:'https://github.com/maotterson/blackjack'
+        github:'https://github.com/maotterson/blackjack',
+        bgVideo: require('@/assets/background-videos/blackjack-bg.mp4')
       }
     ]
   },
