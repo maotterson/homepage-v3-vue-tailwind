@@ -1,8 +1,19 @@
 <template>
-  <div class="nav-icon relative w-6 h-5 visible cursor-pointer z-50 	" ref="burger" id="burger">
-    <span class="absolute inset-0 bg-black w-6 h-1 rounded burger-top transition-all	" ref="burgerTop"></span>
-    <span class="absolute inset-y-2 bg-black w-6 h-1 rounded burger-middle transition-all	" ref="burgerMiddle" ></span>
-    <span class="absolute inset-y-4 bg-black w-6 h-1 rounded burger-bottom transition-all	" ref="burgerBottom"></span>
+  <div class="nav-icon relative w-6 h-5 visible cursor-pointer z-50 	" 
+    ref="burger" 
+    id="burger">
+    <span 
+      class="absolute inset-0 w-6 h-1 rounded burger-top transition-all	"
+      :class="isDarkTheme ? 'bg-white' : 'bg-black'" 
+      ref="burgerTop"></span>
+    <span 
+      class="absolute inset-y-2 w-6 h-1 rounded burger-middle transition-all	" 
+      :class="isDarkTheme ? 'bg-white' : 'bg-black'" 
+      ref="burgerMiddle" ></span>
+    <span 
+      class="absolute inset-y-4 w-6 h-1 rounded burger-bottom transition-all	" 
+      :class="isDarkTheme ? 'bg-white' : 'bg-black'" 
+      ref="burgerBottom"></span>
   </div>
 </template>
 
@@ -16,6 +27,9 @@ export default Vue.extend({
     drawerShowing () {
       return this.$store.state.drawerShowing
     },
+    isDarkTheme(){
+      return this.$store.state.isDarkTheme
+    }
   },
   watch:{
     drawerShowing (){

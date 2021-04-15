@@ -28,7 +28,7 @@ export default {
     },
     drawerShowing () {
       return this.$store.state.drawerShowing
-    },
+    }
   },
   watch:{
     scrollY (){

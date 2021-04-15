@@ -8,6 +8,7 @@ export default new Vuex.Store({
     drawerShowing : false,
     scrollY : 0,
     resumeScrollY : 0,
+    isDarkTheme : false,
     socials : [
       {
         name: "Website",
@@ -86,6 +87,12 @@ export default new Vuex.Store({
     },
     scrollY(){
       return this.state.scrollY;
+    },
+    innerHeight(){
+      return window.innerHeight
+    },
+    outerHeight(){
+      return window.outerHeight
     }
   },
   mutations: {
@@ -97,17 +104,41 @@ export default new Vuex.Store({
       this.state.drawerShowing = false;
     },
     setScrollY(state, payload){
-      this.state.scrollY = payload.y;
+      this.state.scrollY = payload.y
+      const totalHeight = document.body.scrollHeight
+      const heightPerPage = this.getters.outerHeight;
+      
+      let pageScrolledTo = 1;
+
+      if(totalHeight&&heightPerPage){
+        const offset = determinePageScrolledTo(0, totalHeight, heightPerPage)
+        pageScrolledTo = determinePageScrolledTo(this.state.scrollY, totalHeight, heightPerPage)
+        console.log(offset)
+        console.log(pageScrolledTo)
+        pageScrolledTo -= offset;
+        console.log(pageScrolledTo)
+      }
+      
+      pageScrolledTo%2==0 ? this.state.isDarkTheme=false : this.state.isDarkTheme=true;
+
     },
     forcedScrollUp(){
       this.state.resumeScrollY = this.state.scrollY
     },
     resetScrollResume(){
       this.state.resumeScrollY = 0;
-    }
+    },
   },
   actions: {
   },
   modules: {
   }
 })
+
+function determinePageScrolledTo(scrollY, totalHeight, heightPerPage){
+  const startOfPageHeight = totalHeight - heightPerPage;
+  if(scrollY > startOfPageHeight){
+    return startOfPageHeight/heightPerPage;
+  }
+  return determinePageScrolledTo(scrollY, startOfPageHeight, heightPerPage)
+}
