@@ -45,12 +45,53 @@ export default Vue.extend({
   computed:{
     projects() {
       return this.$store.state.projects
+    },
+    scrollY() {
+      return this.$store.state.scrollY
+    }
+  },
+  data () {
+      return {
+          pageBounds : []
+      }
+  },
+  mounted(){
+    this.setPageBounds();
+  },
+  watch:{
+    scrollY(){
+      const currentPage = this.determineCurrentPage()
+      let isDarkTheme = false;
+      currentPage%2==0 ? isDarkTheme=false : isDarkTheme=true;
+      const payload = {
+        isDarkTheme: isDarkTheme
+      }
+      this.$store.commit(`setIsDarkTheme`,payload)
     }
   },
   methods:{
     scrollToSection(sectionId){
       console.log(sectionId)
       this.$refs[sectionId][0].$el.scrollIntoView({behavior: "smooth"})
+    },
+    determineCurrentPage(){
+      for(let i=0; i<this.pageBounds.length; i++){
+        const bottomBound = this.pageBounds[i]
+        if(this.scrollY <= bottomBound){
+          return i
+        }
+      } 
+      // should never reach here, can't scroll beyond final project
+      return this.pageBounds.length
+    },
+    setPageBounds(){
+      this.pageBounds=[]
+      this.projects.forEach(project =>{
+        // additional offset for icon size
+        const offsetTransition = 50;
+        const offsetSection = this.$refs[project.sectionId][0].$el.offsetTop-offsetTransition
+        this.pageBounds.push(offsetSection)
+      })
     }
   }
 })

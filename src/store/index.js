@@ -51,7 +51,7 @@ export default new Vuex.Store({
         name: 'Ohio Vaccine Map',
         description:'A searchable map of nearby available COVID-19 vaccine appointments in Ohio.',
         image: 'vaccine',
-        sectionId: 'vaccine',
+        sectionId: 'section-1',
         link:'https://vaccines.maotterson.com',
         bgVideo: require('@/assets/background-videos/vaccine-bg.mp4')
       },
@@ -59,7 +59,7 @@ export default new Vuex.Store({
         name: 'Open Weather Map',
         description:'An interactive map that provides some basic weather information at a given location.',
         image: 'weather',
-        sectionId: 'weather',
+        sectionId: 'section-2',
         github:'https://github.com/maotterson/weathermap',
         bgVideo: require('@/assets/background-videos/weather-bg.mp4')
       },
@@ -67,7 +67,7 @@ export default new Vuex.Store({
         name: 'Android Geography Quiz',
         description:'A geography game inspired by Traveler IQ. Made for an android device..',
         image: 'geography',
-        sectionId: 'geographyquiz',
+        sectionId: 'section-3',
         github:'https://github.com/maotterson/geography-quiz',
         bgVideo: require('@/assets/background-videos/geography-bg.mp4')
       },
@@ -75,7 +75,7 @@ export default new Vuex.Store({
         name: 'Android Blackjack',
         description:'A basic implementation of blackjack for an android device.',
         image: 'blackjack',
-        sectionId: 'blackjack',
+        sectionId: 'section-4',
         github:'https://github.com/maotterson/blackjack',
         bgVideo: require('@/assets/background-videos/blackjack-bg.mp4')
       }
@@ -105,22 +105,6 @@ export default new Vuex.Store({
     },
     setScrollY(state, payload){
       this.state.scrollY = payload.y
-      const totalHeight = document.body.scrollHeight
-      const heightPerPage = this.getters.outerHeight;
-      
-      let pageScrolledTo = 1;
-
-      if(totalHeight&&heightPerPage){
-        const offset = determinePageScrolledTo(0, totalHeight, heightPerPage)
-        pageScrolledTo = determinePageScrolledTo(this.state.scrollY, totalHeight, heightPerPage)
-        console.log(offset)
-        console.log(pageScrolledTo)
-        pageScrolledTo -= offset;
-        console.log(pageScrolledTo)
-      }
-      
-      pageScrolledTo%2==0 ? this.state.isDarkTheme=false : this.state.isDarkTheme=true;
-
     },
     forcedScrollUp(){
       this.state.resumeScrollY = this.state.scrollY
@@ -128,17 +112,12 @@ export default new Vuex.Store({
     resetScrollResume(){
       this.state.resumeScrollY = 0;
     },
+    setIsDarkTheme(state, payload){
+      this.state.isDarkTheme = payload.isDarkTheme
+    }
   },
   actions: {
   },
   modules: {
   }
 })
-
-function determinePageScrolledTo(scrollY, totalHeight, heightPerPage){
-  const startOfPageHeight = totalHeight - heightPerPage;
-  if(scrollY > startOfPageHeight){
-    return startOfPageHeight/heightPerPage;
-  }
-  return determinePageScrolledTo(scrollY, startOfPageHeight, heightPerPage)
-}

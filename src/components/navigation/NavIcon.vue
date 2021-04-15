@@ -34,6 +34,9 @@ export default Vue.extend({
   watch:{
     drawerShowing (){
       this.changeIconAppearance();
+    },
+    isDarkTheme(){
+      console.log(this.isDarkTheme)
     }
   },
   methods: {
