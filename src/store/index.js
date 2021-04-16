@@ -89,6 +89,15 @@ export default new Vuex.Store({
         },
         skills: [
           {
+            name: "HTML5/CSS3/Vanilla JS",
+            icon: {
+              prefix: "fab",
+              name: "html5"
+            },
+            level: 5,
+            subs: ["Bootstrap","Tailwind CSS","Material"]
+          },
+          {
             name: "Vue.js",
             icon: {
               prefix: "fab",
@@ -103,15 +112,6 @@ export default new Vuex.Store({
               name: "angular"
             },
             level: 4
-          },
-          {
-            name: "HTML5/CSS3/Vanilla JS",
-            icon: {
-              prefix: "fab",
-              name: "html5"
-            },
-            level: 4,
-            subs: ["Bootstrap","Tailwind CSS","Material"]
           },
           {
             name:"Svelte",

@@ -4,14 +4,18 @@
       class="fixed w-screen bg-white text-black inset-0 overflow-hidden"
     />
     <router-view />
+    <PageFooter
+    />
   </div>
 </template>
 
 <script>
 import NavContainer from './components/navigation/NavContainer.vue'
+import PageFooter from './components/common/PageFooter.vue'
 export default {
   components:{
-    NavContainer
+    NavContainer,
+    PageFooter
   },
   mounted(){
     window.onscroll = () =>

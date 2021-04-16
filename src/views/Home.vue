@@ -2,6 +2,7 @@
   <div>
     <TitleSheet 
       :title="'Hello'"
+      class="h-screen"
     >
       <p class="text-5xl text-gray-800 mt-5 ">My name is <span class="text-red-600">Mark Otterson</span>.</p>
       <p class="text-5xl text-gray-700 mt-5 ">I am a software/web developer and tutor from <span class="text-blue-600">Cleveland, Ohio</span>.</p>

@@ -2,23 +2,25 @@
   <div>
     <TitleSheet 
       :title="'Skills'"
-    />
-    <div
-      class="flex flex-col">
+      :noSpacer="true"
+    >
       <div
-        class="flex flex-row self-center">
-        <CategoryDetailsTab
-          v-for="(category) in skillCategories" 
-          :key="category.category"
-          :category="category"
-          class="hover:text-red-600 mr-8"
-          @click.native="showCategory(category)"
+        class="flex flex-col">
+        <div
+          class="flex flex-row self-center mb-8">
+          <CategoryDetailsTab
+            v-for="(category) in skillCategories" 
+            :key="category.category"
+            :category="category"
+            class="hover:text-red-600 mr-8"
+            @click.native="showCategory(category)"
+          />
+        </div>
+        <CategoryDetailsPanel 
+          :category="selectedCategory ? selectedCategory : null"
         />
       </div>
-      <CategoryDetailsPanel 
-        :category="selectedCategory ? selectedCategory : null"
-      />
-    </div>
+    </TitleSheet>
   </div>
 </template>
 

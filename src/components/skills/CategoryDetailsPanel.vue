@@ -1,13 +1,13 @@
 <template>
   <div
-    class="bg-black w-1/2 text-white self-center"
+    class="bg-white w-3/4 text-black self-center"
   >
     <div
       v-if="category">
       <div
         v-for="skill in category.skills"
         :key="skill.name"
-        class="flex flex-col p-10 items-start"
+        class="flex flex-col p-10 items-start h-48"
       >
         <div
           class="flex flex-row items-center"
@@ -46,7 +46,7 @@
           <div
             v-for="i in parseInt(skill.level)"
             :key="i"
-            class="w-1/5 h-full bg-white"
+            class="w-1/5 h-full bg-red-600"
           >
           </div>
         </div>

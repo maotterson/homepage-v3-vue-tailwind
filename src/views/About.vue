@@ -2,6 +2,7 @@
   <div>
     <TitleSheet 
       :title="'About me'"
+      class="h-screen w-screen"
     />
   </div>
 </template>

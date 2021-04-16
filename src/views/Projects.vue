@@ -1,7 +1,8 @@
 <template>
-  <div class="h-screen">
+  <div class="">
     <TitleSheet 
       :title="'Projects'"
+      class="h-screen w-screen"
     >
       <p class="text-5xl text-gray-800 mt-48">Explore some of the projects I've worked on</p>
       <div class="mt-5 flex flex-row"
