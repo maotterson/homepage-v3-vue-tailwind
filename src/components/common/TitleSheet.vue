@@ -4,8 +4,6 @@
       <h1 class="text-8xl">{{title}}.</h1>
       <slot></slot>
     </div>
-    <div 
-      class="spacer"></div>
   </div>
 </template>
 

@@ -2,12 +2,17 @@
   <div>
     <TitleSheet 
       :title="'Skills'"
-      :noSpacer="true"
+      class="min-h-screen"
     >
+      <p
+        class="text-4xl text-gray-800 mt-5"
+      >
+        My level of comfortability with various skills/technologies
+      </p>
       <div
-        class="flex flex-col">
+        class="flex flex-col mt-16">
         <div
-          class="flex flex-row self-center mb-8">
+          class="flex flex-row  mb-4">
           <CategoryDetailsTab
             v-for="(category) in skillCategories" 
             :key="category.category"
@@ -38,16 +43,23 @@ export default Vue.extend({
   computed:{
     skillCategories() {
       return this.$store.state.skillCategories
+    },
+    selectedSkillTab() {
+      return this.$store.state.selectedCategoryTab
+    },
+    selectedCategory(){
+      return this.$store.state.selectedCategory
     }
   },
-  data () {
-      return {
-          selectedCategory : null
-      }
+  mounted (){
+    this.showCategory(this.skillCategories[0])
   },
   methods:{
     showCategory(category){
-      this.selectedCategory = category
+      const payload = {
+        selectedCategory: category
+      }
+      this.$store.commit('selectedCategory', payload)
     }
   }
 

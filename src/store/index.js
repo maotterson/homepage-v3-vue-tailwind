@@ -9,6 +9,7 @@ export default new Vuex.Store({
     scrollY : 0,
     resumeScrollY : 0,
     isDarkTheme : false,
+    selectedCategory : {},
     socials : [
       {
         name: "Website",
@@ -137,7 +138,7 @@ export default new Vuex.Store({
               name: "node"
             },
             level: 4,
-            subs: ["Express.js"]
+            subs: ["Express.js","NPM"]
           },
           {
             name: "ASP.NET",
@@ -154,7 +155,8 @@ export default new Vuex.Store({
               prefix: "fab",
               name: "php"
             },
-            level: 3
+            level: 3,
+            subs: ["Laravel","Composer"]
           },
         ]
       },
@@ -337,6 +339,9 @@ export default new Vuex.Store({
     },
     setIsDarkTheme(state, payload){
       this.state.isDarkTheme = payload.isDarkTheme
+    },
+    selectedCategory(state, payload){
+      this.state.selectedCategory = payload.selectedCategory
     }
   },
   actions: {

@@ -1,13 +1,13 @@
 <template>
   <div
-    class="bg-white w-3/4 text-black self-center"
+    class="bg-white w-3/4 text-black"
   >
     <div
       v-if="category">
       <div
         v-for="skill in category.skills"
         :key="skill.name"
-        class="flex flex-col p-10 items-start h-48"
+        class="flex flex-col py-10 items-start h-48"
       >
         <div
           class="flex flex-row items-center"
