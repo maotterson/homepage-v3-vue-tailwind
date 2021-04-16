@@ -71,7 +71,6 @@ export default Vue.extend({
   },
   methods:{
     scrollToSection(sectionId){
-      console.log(sectionId)
       this.$refs[sectionId][0].$el.scrollIntoView({behavior: "smooth"})
     },
     determineCurrentPage(){

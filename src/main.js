@@ -9,9 +9,38 @@ import { faLinkedin,
   faCodepen,
   faGithub,
   faGithubAlt,
-  faGithubSquare
+  faGithubSquare,
+
+  faNode,
+  faVuejs,
+  faAngular,
+  faHtml5,
+  faPhp,
+  faJs,
+  faJava,
+  faPython,
+  faAws,
+  faGoogle,
+
+  faStaylinked,
+  faMicrosoft,
+  faKorvue
 } from "@fortawesome/free-brands-svg-icons";
-import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { faHome,
+  faDesktop,
+  faServer,
+  faCode,
+  faPlus,
+  faDatabase,
+  faLeaf,
+  faFish,
+  faCloud,
+  faFolderOpen,
+  faFileWord,
+  faAd
+
+
+} from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -26,7 +55,31 @@ library.add(
   faGithubAlt,
   faGithubSquare,
   faHome,
-  faEnvelope
+  faEnvelope,
+  faNode,
+  faVuejs,
+  faAngular,
+  faHtml5,
+  faPhp,
+  faJs,
+  faJava,
+  faPython,
+  faAws,
+  faGoogle,
+  faStaylinked,
+  faMicrosoft,
+  faKorvue,
+  faDesktop,
+  faServer,
+  faCode,
+  faPlus,
+  faDatabase,
+  faLeaf,
+  faFish,
+  faCloud,
+  faFolderOpen,
+  faFileWord,
+  faAd
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

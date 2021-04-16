@@ -79,6 +79,229 @@ export default new Vuex.Store({
         github:'https://github.com/maotterson/blackjack',
         bgVideo: require('@/assets/background-videos/blackjack-bg.mp4')
       }
+    ],
+    skillCategories : [
+      {
+        category: "Front-end",
+        icon: {
+          prefix : "fas",
+          name : "desktop"
+        },
+        skills: [
+          {
+            name: "Vue.js",
+            icon: {
+              prefix: "fab",
+              name: "vuejs"
+            },
+            level: 4
+          },
+          {
+            name: "Angular",
+            icon: {
+              prefix: "fab",
+              name: "angular"
+            },
+            level: 4
+          },
+          {
+            name: "HTML5/CSS3/Vanilla JS",
+            icon: {
+              prefix: "fab",
+              name: "html5"
+            },
+            level: 4,
+            subs: ["Bootstrap","Tailwind CSS","Material"]
+          },
+          {
+            name:"Svelte",
+            icon: {
+              prefix: "fab",
+              name: "staylinked" // placeholder
+            },
+            level: 2
+          }
+        ]
+      },
+      {
+        category: "Back-end",
+        icon: {
+          prefix : "fas",
+          name : "server"
+        },
+        skills: [
+          {
+            name: "Node.js",
+            icon: {
+              prefix: "fab",
+              name: "node"
+            },
+            level: 4,
+            subs: ["Express.js"]
+          },
+          {
+            name: "ASP.NET",
+            icon: {
+              prefix: "fab",
+              name: "microsoft" // placeholder
+            },
+            level: 4,
+            subs: [".NET Core","Razor"]
+          },
+          {
+            name: "PHP",
+            icon: {
+              prefix: "fab",
+              name: "php"
+            },
+            level: 3
+          },
+        ]
+      },
+      {
+        category: "Languages",
+        icon: {
+          prefix : "fas",
+          name : "code"
+        },
+        skills: [
+          {
+            name: "Javascript/TypeScript",
+            icon: {
+              prefix: "fab",
+              name: "js"
+            },
+            level: 5
+          },
+          {
+            name: "C#",
+            icon: {
+              prefix: "fab",
+              name: "microsoft" // placeholder
+            },
+            level: 5
+          },
+          {
+            name: "Java",
+            icon: {
+              prefix: "fab",
+              name: "java"
+            },
+            level: 4
+          },
+          {
+            name: "C++",
+            icon: {
+              prefix: "fas",
+              name: "plus" // placeholder
+            },
+            level: 2
+          },
+          {
+            name: "Python",
+            icon: {
+              prefix: "fab",
+              name: "python" // placeholder
+            },
+            level: 2
+          },
+        ]
+      },
+      {
+        category: "DBMS",
+        icon: {
+          prefix : "fas",
+          name : "database"
+        },
+        skills: [
+          {
+            name: "MongoDB",
+            icon: {
+              prefix: "fas",
+              name: "leaf" //placeholder
+            },
+            level: 4,
+            subs: ['Atlas','Realm']
+          },
+          {
+            name: "MySQL",
+            icon: {
+              prefix: "fas",
+              name: "fish" // placeholder
+            },
+            level: 2
+          },
+          {
+            name: "SQL Server",
+            icon: {
+              prefix: "fab",
+              name: "microsoft" // placeholder
+            },
+            level: 2,
+            subs: ['Entity Framework']
+          }
+        ]
+      },
+      {
+        category: "Cloud Services",
+        icon: {
+          prefix : "fas",
+          name : "cloud"
+        },
+        skills: [
+          {
+            name: "AWS",
+            icon: {
+              prefix: "fab",
+              name: "aws" 
+            },
+            level: 3
+          },
+          {
+            name: "Google Cloud/Firebase",
+            icon: {
+              prefix: "fab",
+              name: "google" 
+            },
+            level: 3
+          },
+          {
+            name: "Heroku",
+            icon: {
+              prefix: "fab",
+              name: "korvue" // placeholder
+            },
+            level: 2
+          }
+        ]
+      },
+      {
+        category: "Software/Tools",
+        icon: {
+          prefix : "fas",
+          name : "folder-open"
+        },
+        skills: [
+          {
+            name: "Microsoft Office",
+            icon: {
+              prefix: "fas",
+              name: "file-word" 
+            },
+            level: 5,
+            subs: ["Excel","Word","Powerpoint","Access"]
+          },
+          {
+            name: "Adobe Creative",
+            icon: {
+              prefix: "fas",
+              name: "ad" // placeholder
+            },
+            level: 3,
+            subs: ["Photoshop","Illustrator"]
+          }
+        ]
+      },
     ]
   },
   getters: {
