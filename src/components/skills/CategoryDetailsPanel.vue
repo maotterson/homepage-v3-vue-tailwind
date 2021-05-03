@@ -7,15 +7,21 @@
       <div
         v-for="skill in category.skills"
         :key="skill.name"
-        class="flex flex-col py-10 items-start h-48"
+        class="flex flex-col py-10 items-start md:h-48 h-32"
       >
         <div
           class="flex flex-row items-center"
         >
           <font-awesome-icon 
-                :icon="[`${skill.icon.prefix}`, `${skill.icon.name}`]" 
-                class="text-6xl self-center mr-8"
-            />
+            v-if="skill.icon.prefix"
+            :icon="[`${skill.icon.prefix}`, `${skill.icon.name}`]" 
+            class="text-6xl self-center mr-8"
+          />
+          <span
+            v-if="!skill.icon.prefix"
+            :class="`${skill.icon}`"
+            class="text-6xl self-center mr-8">
+          </span>
           <div
             class="flex flex-col">
             

@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'icomoon-icons';
+  src:  url('fonts/icomoon-icons.eot?2sfz9q');
+  src:  url('fonts/icomoon-icons.eot?2sfz9q#iefix') format('embedded-opentype'),
+    url('fonts/icomoon-icons.ttf?2sfz9q') format('truetype'),
+    url('fonts/icomoon-icons.woff?2sfz9q') format('woff'),
+    url('fonts/icomoon-icons.svg?2sfz9q#icomoon-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-adobecreativecloud:before {
+  content: "\e900";
+}
+.icon-svelte:before {
+  content: "\e901";
+}
+.icon-dot-net:before {
+  content: "\e902";
+}
+.icon-mongodb:before {
+  content: "\e903";
+}
+.icon-csharp:before {
+  content: "\e904";
+}
+.icon-cplusplus:before {
+  content: "\e905";
+}
+.icon-microsoftsqlserver:before {
+  content: "\e906";
+}
+.icon-postgresql:before {
+  content: "\e907";
+}
+.icon-mysql:before {
+  content: "\e908";
+}
+.icon-heroku:before {
+  content: "\e909";
+}

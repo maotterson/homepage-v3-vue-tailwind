@@ -62,6 +62,8 @@ export default {
 </script>
 
 <style>
+
+@import './assets/icons/style.css';
 html{
   overflow-y:overlay;  
 

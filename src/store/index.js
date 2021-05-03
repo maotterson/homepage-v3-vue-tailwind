@@ -116,10 +116,7 @@ export default new Vuex.Store({
           },
           {
             name:"Svelte",
-            icon: {
-              prefix: "fab",
-              name: "staylinked" // placeholder
-            },
+            icon: "icon-svelte",
             level: 2
           }
         ]
@@ -142,10 +139,7 @@ export default new Vuex.Store({
           },
           {
             name: "ASP.NET",
-            icon: {
-              prefix: "fab",
-              name: "microsoft" // placeholder
-            },
+            icon: "icon-dot-net",
             level: 4,
             subs: [".NET Core","Razor"]
           },
@@ -177,10 +171,7 @@ export default new Vuex.Store({
           },
           {
             name: "C#",
-            icon: {
-              prefix: "fab",
-              name: "microsoft" // placeholder
-            },
+            icon: "icon-csharp",
             level: 5
           },
           {
@@ -193,17 +184,14 @@ export default new Vuex.Store({
           },
           {
             name: "C++",
-            icon: {
-              prefix: "fas",
-              name: "plus" // placeholder
-            },
+            icon: "icon-cplusplus",
             level: 2
           },
           {
             name: "Python",
             icon: {
               prefix: "fab",
-              name: "python" // placeholder
+              name: "python" 
             },
             level: 2
           },
@@ -218,27 +206,18 @@ export default new Vuex.Store({
         skills: [
           {
             name: "MongoDB",
-            icon: {
-              prefix: "fas",
-              name: "leaf" //placeholder
-            },
+            icon: "icon-mongodb",
             level: 4,
             subs: ['Atlas','Realm']
           },
           {
             name: "MySQL",
-            icon: {
-              prefix: "fas",
-              name: "fish" // placeholder
-            },
+            icon: "icon-mysql",
             level: 2
           },
           {
             name: "SQL Server",
-            icon: {
-              prefix: "fab",
-              name: "microsoft" // placeholder
-            },
+            icon: "icon-microsoftsqlserver",
             level: 2,
             subs: ['Entity Framework']
           }
@@ -269,10 +248,7 @@ export default new Vuex.Store({
           },
           {
             name: "Heroku",
-            icon: {
-              prefix: "fab",
-              name: "korvue" // placeholder
-            },
+            icon: "icon-heroku",
             level: 2
           }
         ]
@@ -295,10 +271,7 @@ export default new Vuex.Store({
           },
           {
             name: "Adobe Creative",
-            icon: {
-              prefix: "fas",
-              name: "ad" // placeholder
-            },
+            icon: "icon-adobecreativecloud",
             level: 3,
             subs: ["Photoshop","Illustrator"]
           }
