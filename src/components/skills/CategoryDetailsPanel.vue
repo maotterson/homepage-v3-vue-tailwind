@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white w-3/4 text-black"
+    class="bg-white md:w-3/4 text-black"
   >
     <div
       v-if="category">

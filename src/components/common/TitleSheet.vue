@@ -1,7 +1,7 @@
 <template>
-  <div class="sheet flex mt-40 justify-evenly transform transition-all">
-    <div class="card p-8 w-3/4">
-      <h1 class="text-8xl">{{title}}.</h1>
+  <div class="sheet flex md:mt-40 mt-48 justify-evenly transform transition-all">
+    <div class="card p-8 md:w-3/4">
+      <h1 class="md:text-8xl text-7xl md:mb-0 mb-8">{{title}}.</h1>
       <slot></slot>
     </div>
   </div>

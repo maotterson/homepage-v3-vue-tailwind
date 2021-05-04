@@ -2,7 +2,7 @@
   <div class="">
     <TitleSheet 
       :title="'Projects'"
-      class="h-screen w-screen"
+      class="h-screen "
     >
       <p class="text-5xl text-gray-800 mt-48">Explore some of the projects I've worked on</p>
       <div class="mt-5 flex flex-row"
@@ -14,7 +14,7 @@
           @click="scrollToSection(project.sectionId)"
           >
             <div
-              class="h-48 w-48 bg-cover"
+              class="md:h-48 md:w-48 h-16 w-16 bg-cover"
               :class="`${project.image}-thumb`">
             </div>
             <span

@@ -2,11 +2,11 @@
   <div>
     <TitleSheet 
       :title="'Hello'"
-      class="h-screen"
+      class="min-h-screen"
     >
-      <p class="text-4xl text-gray-800 mt-5 ">My name is <span class="text-red-600">Mark Otterson</span>.</p>
-      <p class="text-4xl text-gray-700 mt-5 ">I am a software/web developer and tutor from <span class="text-blue-600">Cleveland, Ohio</span>.</p>
-      <p class="text-4xl text-gray-700 mt-48 mb-5">Contact or follow me at:</p>
+      <p class="md:text-4xl text-2xl text-gray-800 mt-5 ">My name is <span class="text-red-600">Mark Otterson</span>.</p>
+      <p class="md:text-4xl text-2xl text-gray-700 mt-5 ">I am a software/web developer and tutor from <span class="text-blue-600">Cleveland, Ohio</span>.</p>
+      <p class="md:text-4xl text-2xl text-gray-700 md:mt-48 mt-24 mb-5">Contact or follow me at:</p>
       <ul>
         <Social
           v-for="social in socials" 

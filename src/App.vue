@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div s>
     <NavContainer 
       class="fixed w-screen bg-white text-black inset-0 overflow-hidden"
     />
