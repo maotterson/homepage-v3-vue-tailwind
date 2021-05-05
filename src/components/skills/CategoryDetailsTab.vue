@@ -1,12 +1,15 @@
 <template>
   <div
-    class="flex flex-col"
+    class="flex flex-col justify-center md:text-md text-xs items-center self-center"
     :class="isSelected ? 'text-red-600' : 'text-black'">
     <font-awesome-icon 
       :icon="[`${category.icon.prefix}`, `${category.icon.name}`]" 
-      class="text-4xl self-center"
+      class="md:text-4xl text-3xl self-center text-center  mb-1"
     />
+    <span
+      class="text-center ">
     {{category.category}}
+    </span>
   </div>
 </template>
 

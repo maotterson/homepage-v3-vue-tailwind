@@ -5,7 +5,7 @@
       class="min-h-screen"
     >
       <p
-        class="text-4xl text-gray-800 mt-5"
+        class="md:text-4xl text-3xl text-gray-800 mt-5"
       >
         My level of comfortability with various skills/technologies
       </p>
@@ -17,7 +17,7 @@
             v-for="(category) in skillCategories" 
             :key="category.category"
             :category="category"
-            class="hover:text-red-600 mr-8"
+            class="hover:text-red-600 md:mr-8 mr-4"
             @click.native="showCategory(category)"
           />
         </div>

@@ -7,7 +7,7 @@
       <div
         v-for="skill in category.skills"
         :key="skill.name"
-        class="flex flex-col py-10 items-start md:h-48 h-32"
+        class="flex flex-col py-10 items-start"
       >
         <div
           class="flex flex-row items-center"
